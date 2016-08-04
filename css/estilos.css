@@ -1,0 +1,285 @@
+html
+{
+    position: relative; 
+    min-height: 100%;
+}
+
+#main-header {
+	background: #333;
+	color: white;
+	height: 80px;
+	position:fixed;
+	width:90%;
+	margin: 0 auto;
+	
+}	
+	#main-header a {
+		color: white;
+	}
+/*
+ * Navegación HEADER
+ */
+nav {
+	float: left;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					background: #FFD700;
+				}
+/*
+ * Logo
+ */
+#Whatsapp-header {
+	float: right;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+	margin-top: 20px;
+}
+	#Whatsapp-header:hover {
+		color: #FF8C00;
+	}
+	#Whatsapp-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+body {
+
+	background: #FFF;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	color: #717171;
+	font-family: 'Istok Web',arial,serif;
+	width:90%;
+	margin:0 auto;
+	height:100px;
+}
+
+#head {
+	height: 200px;
+}
+
+	
+	/* ESTA PARTE PARA menu principal */
+ul,li{
+list-style:none;
+}
+
+.nov  {
+		text-align:left;
+		text-shadow: 2px 2px 4px #333;
+		color:#FFF;
+	}
+	.nov li {
+		padding: 0px;
+		font-size:14px;
+		position:relative;
+		border: 2px #FFD700 solid;
+   		width:200px;
+		background:#333;
+		color:#FFF;
+	}
+	.nov li:hover ul {
+				display:block;
+	}
+	.nov li ul{
+		display:none;
+		position:relative;
+		left:-30px;
+		top:0px;
+		width:153px;
+	}
+	
+	.nov li a {
+				display: block;
+				padding: 10px;
+				text-decoration: none;
+						color:#FFF;
+	} 
+	.nov li a:hover{
+						background: #FFD700;
+	}
+
+#leftt {
+	float: left;
+	width: 20%;
+	height: 300px;
+	-webkit-border-radius: 10px;
+	margin-left: 10px;
+	margin-bottom: 18px;
+
+	
+}
+#rigthh {
+	float: left;
+	width: 70%;
+	height: 400px;
+	-webkit-border-radius: 10px;
+	margin: 40px;
+	margin-top: 0;
+	
+}
+
+#novedades{
+	float:left;
+	-webkit-border-radius: 10px;
+	border: 1px #333 solid;
+	padding: 10px;
+	
+	
+}
+
+#vistaprepro {
+	width: 17%;
+	height: 250px;
+	float:left;	
+	padding: 20px;
+	background: #FFF;
+	-webkit-border-radius: 10px;
+	margin:10px;
+	border-width: thin;
+	border-style: solid;
+	border-color:#333;
+	text-decoration: none;
+	margin-top: 20px;
+	}
+	#vistaprepro a{
+    border-style:solid;
+	}
+	
+	#vistaprepro:hover {
+		background: #333;
+		width:18%;
+		color:#FFF;
+	}
+	
+#Buscador{
+	padding: 8px;
+	background: #333;
+    text-align:left;
+	-webkit-border-radius: 8px;
+	margin-bottom: 20px;
+}
+#sectio_r {
+	padding: 8px;
+	background: #333;
+    text-align:left;
+	-webkit-border-radius: 8px;
+	margin-bottom: 20px;
+	color: white;
+	height: 180px;
+}
+#sectio_r a{
+ color:#FFF;
+}
+
+#tittle_h {
+	font-size: 18px;
+	color: #535353;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #CCC;
+}
+#tittle_h a {
+	color: #535353;
+	text-decoration:none;
+}
+#tittle_h a:hover {
+	color: #7da1bc;
+}
+
+#buscar {
+	position: relative;
+	width: 80%;
+	padding: 10px 30px 10px 10px;
+	outline: none;
+	background: #F7F7F7;
+	border: 1px solid #CCC;
+	color: #666;
+	text-shadow: 1px 1px 1px #FFF;
+}
+.btn_b {
+	background: url(../img/search.png) no-repeat;
+	float: right;
+	border: none;
+	outline: none;
+	width: 10px;
+	height: 15px;
+	cursor: pointer;
+	margin-top: 0px;
+	margin-right: 5px;
+	z-index: 999;
+	position: relative;
+}
+
+/* AQUI VA LA PARTE DE VER_PRODUCTO */
+
+#ver_producto{
+	margin:0 auto;
+	margin-top:90px;
+	float: left;
+	-webkit-border-radius: 10px;
+	width:95%;
+	padding: 30px;
+}
+
+#fotospro {
+	text-align:center;
+	float: left;
+	width: 20%;
+	-webkit-border-radius: 10px;
+	border:1px #FFF solid;
+	margin-top:30px;
+	margin-left:15%;
+
+	
+}
+#infopro {
+	float: left;
+	margin-left:0%;
+}
+
+#misionyvision {
+border:1px #333 solid;
+padding:20px;
+float:none;
+margin:0 auto;
+width: 80%;
+font-weight: normal;
+font-size:18px;
+-webkit-border-radius: 10px;
+}
+
+
+
+#footer {
+		    margin-top: 300px;
+			margin-bottom:0px;
+            height: 20px;
+            padding:5px 0px;
+            clear: both;
+            text-align: center;
+            color: #fff;
+		    background: #333;
+			width: 90%;
+		    bottom: 0;
+		    position: fixed;
+}
