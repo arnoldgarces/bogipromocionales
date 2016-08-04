@@ -1,6 +1,6 @@
 <?php require_once('Connections/conexion.php'); 
 mysql_select_db($database_conexion, $conexion);
-$query_SacarListado = "SELECT * FROM productos ORDER BY fecha DESC LIMIT 20";
+$query_SacarListado = "SELECT * FROM producto ORDER BY fecha DESC LIMIT 20";
 $SacarListado = mysql_query($query_SacarListado, $conexion) or die(mysql_error());
 ?>
 
