@@ -133,6 +133,18 @@
               
                           </select></td>
                     </tr>
+                    <tr>
+                     <td width="60" align="right" nowrap="nowrap">Medidas:</td>
+            <td width="531"><input type="text" name="medidas" value="" size="50" /></td>
+            </tr>
+               <tr>
+                     <td width="60" align="right" nowrap="nowrap">Materiales:</td>
+            <td width="531"><input type="text" name="materiales" value="" size="50" /></td>
+            </tr>
+                <tr>
+                     <td width="60" align="right" nowrap="nowrap">Colores:</td>
+            <td width="531"><input type="text" name="colores" value="" size="50" /></td>
+            </tr>
 		            <tr bgcolor="skyblue">
             <td bgcolor="skyblue"><strong>Foto:</strong></td><td><input type="file" name="imagen" ></td>
             </tr>
@@ -140,7 +152,7 @@
             </tr>
           <tr valign="baseline">
             <td nowrap="nowrap" align="right">&nbsp;</td>
-            <td><input type="submit" value="Agregar" /></td>
+            <td><br><br><input type="submit" value="Agregar Producto" /></td>
           </tr>
         </table>
         <input type="hidden" name="MM_insert" value="form1" />

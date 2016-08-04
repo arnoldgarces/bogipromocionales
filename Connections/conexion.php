@@ -3,7 +3,7 @@ if(!isset($_SESSION)){
 	session_start();
 }
 
-$environment = "production.php";
+$environment = "local.php";
 
 include ($environment);
 

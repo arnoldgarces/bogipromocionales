@@ -7,7 +7,7 @@ $insertSQL = "INSERT INTO novedades (nombre, imagen, autor) VALUES ('$titulo', '
   mysql_select_db($database_conexion, $conexion);
   $Result1 = mysql_query($insertSQL, $conexion) or die(mysql_error());
 
-  $insertGoTo = "index.php";
+  $insertGoTo = "administracion.php";
 
   if (isset($_SERVER['QUERY_STRING'])) {
     $insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";

@@ -4,12 +4,15 @@ $titulo = $_POST['titulo'];
 $contenido = $_POST['contenido'];
 $Id = $_SESSION['MM_Id'];
 $categoria = $_POST['categoria'];
-$insertSQL = "INSERT INTO producto (titulo, contenido, autor, categoria, foto) VALUES ('$titulo', '$contenido', '$Id', '$categoria', '$image')";
+$medidas = $_POST['medidas'];
+$materiales = $_POST['materiales'];
+$colores = $_POST['colores'];
+$insertSQL = "INSERT INTO producto (titulo, contenido, autor, categoria, medidas, materiales, colores, foto) VALUES ('$titulo', '$contenido', '$Id', '$categoria', '$medidas','$materiales','$colores','$image')";
 
   mysql_select_db($database_conexion, $conexion);
   $Result1 = mysql_query($insertSQL, $conexion) or die(mysql_error());
 
-  $insertGoTo = "index.php";
+  $insertGoTo = "exito.php";
 
   if (isset($_SERVER['QUERY_STRING'])) {
     $insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";

@@ -8,7 +8,7 @@ html
 	background: #333;
 	color: white;
 	height: 80px;
-	position:fixed;
+	position:absolute;
 	width:90%;
 	margin: 0 auto;
 	
@@ -247,14 +247,16 @@ list-style:none;
 	width: 20%;
 	-webkit-border-radius: 10px;
 	border:1px #FFF solid;
-	margin-top:30px;
+	margin-top:0px;
 	margin-left:15%;
 
 	
 }
 #infopro {
 	float: left;
-	margin-left:0%;
+	width:50%;
+	margin-left:20%;
+	text-decoration:blink;
 }
 
 #misionyvision {

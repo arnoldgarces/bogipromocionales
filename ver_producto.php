@@ -31,12 +31,24 @@
 	<div id="ver_producto">
     <div id="cacategoria" style="float:left"><?php include("inc/categorias.php"); ?></div>
 	<div id="fotospro"><img width="250%" src="data:image/jpg;base64,<?php echo base64_encode($row_SacarproductoGet['foto']); ?>" ></div>
-    <div id="infopro><center><div id="tittle_h" style="border-bottom:1px dashed #ccc"><?php echo $row_SacarproductoGet['titulo']; ?></div></center>
-    <div id="contenido"><?php echo $row_SacarproductoGet['contenido']; ?></div><br />
+    <div id="infopro">
+        <table align="center">
+    	   <tr valign="baseline">
+        	<br /><center><div id="tittle_h" style="border-bottom:1px dashed #ccc"><?php echo $row_SacarproductoGet['titulo']; ?></div></center>
+	       </tr>
+    	   <tr><td><br /><div id="contenido"><strong>Descripcion: </strong></td><td><?php echo $row_SacarproductoGet['contenido']; ?></div></td></tr>
+	       <tr><td><span class="in_txt"><strong>Subcategoria: </strong></td><td><?php echo $row_SacarproductoGet['categoria']; ?></span></td></tr>
+   	       <tr><td><span class="in_txt"><strong>Medidas: </strong></td><td><?php echo $row_SacarproductoGet['medidas']; ?></span></td></tr>
+  	       <tr><td><span class="in_txt"><strong>Materiales:</strong></td><td><?php echo $row_SacarproductoGet['materiales']; ?></span></td></tr>
+	       <tr><td><span class="in_txt"><strong>Colores: </strong></td><td><?php echo $row_SacarproductoGet['colores']; ?></span></td></tr>
+           <tr><td><span class="in_txt"><strong>Visitas: </strong></td><td><?php echo $row_SacarproductoGet['visitas']; ?></span></td></tr>
+    	   </table>
+	    <br />
+	</div>
+ 	   
 
- 	      <span class="in_txt">Subcategoria: <?php echo $row_SacarproductoGet['categoria']; ?></span>
-          <span class="in_txt">Visitas: <?php echo $row_SacarproductoGet['visitas']; ?></span>
       </div>
+    </div>
     </div>
 <div id="footer">
     BOGI - Articulos Publicitarios S.A.S 2016. Todos los derechos reservados pagina web diseñada por: Arnold Garces Si eres Administrador Ingresa <a href="<?php echo $urlweb ?>login.php">Aqui</a>

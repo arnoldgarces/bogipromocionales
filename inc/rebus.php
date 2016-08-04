@@ -9,7 +9,8 @@ $SacarListado = mysql_query($query_SacarListado, $conexion) or die(mysql_error()
   <a id="vistaprepro" href="ver_producto.php?date=<?php echo $row['id']; ?>">
   <div id="fotopr"><center><img height="150px" width="150px" src="data:image/jpg;base64,<?php echo base64_encode($row['foto']); ?>"</center></div>
     <div id="tittle_h"><center><?php echo $row['titulo']; ?></center></div>
-    <div id="post_info"><center><?php echo $row['contenido']; ?></center></div>
+    <div id="post_info"><center><strong>Materiales: </strong><?php echo $row['materiales']; ?></center>
+    <center><strong>Colores: </strong><?php echo $row['colores']; ?></center></div>
 </a>
  
   <?php } 
