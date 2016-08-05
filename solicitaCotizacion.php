@@ -18,7 +18,7 @@ $asunto = "He Realizado una nueva cotizacion!";
 <header id="main-header"><?php include("inc/header.php"); ?></header><!-- / #main-header -->
     <div id="logo"><center><a href="<?php echo $urlweb ?>"><img src="img/BOGI.png" width="50%" height="100%"/></a></center></div>
 	<div id="ver_producto">
-    <div id="tittle_h"><center>AGREGAR PRODUCTOS</center></div><br>
+    <div id="tittle_h"><center>Realiza tu cotizacion,o escribenos cualquier inquietud</center></div><br>
 	<center>Le recomendamos agregar todos los campos, para que la informacion quede completa</center>
     <div id="cacategoria" style="float:left"><?php include("inc/categorias.php"); ?></div>
 	
