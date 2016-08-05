@@ -20,11 +20,12 @@
 	<div id="rigthh"></div>
     
    
-	 <?php 
-		?>
-        <div id="footer-admin">
-        <?php
+     <?php 
+
 		if (isset ($_SESSION['MM_Id'])){
+					?>
+        			<div id="footer-admin">
+        			<?php
 			 		include("inc/footeradmin.php");
              }
 			 else
@@ -36,5 +37,6 @@
 			 }
 			?>
 
-    </div></body>
+    </div>
+    </body>
 </html>

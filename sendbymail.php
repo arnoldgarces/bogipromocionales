@@ -30,7 +30,6 @@ $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
-
-echo "¡El formulario se ha enviado con éxito!";
+echo"<script type=\"text/javascript\">alert('¡El formulario se ha enviado con éxito!, en unas horas te daremos respuesta a tu correo'); window.location='solicitaCotizacion.php';</script>"; 
 }
 ?>

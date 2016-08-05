@@ -40,11 +40,12 @@ $SacarListado = mysql_query($query_SacarListado, $conexion) or die(mysql_error()
 <br />
 </div>
    
-	 <?php 
-		?>
-        <div id="footer-admin">
-        <?php
+     <?php 
+
 		if (isset ($_SESSION['MM_Id'])){
+					?>
+        			<div id="footer-admin">
+        			<?php
 			 		include("inc/footeradmin.php");
              }
 			 else
@@ -56,5 +57,6 @@ $SacarListado = mysql_query($query_SacarListado, $conexion) or die(mysql_error()
 			 }
 			?>
 
-    </div></body>
+    </div>
+    </body>
 </html>
