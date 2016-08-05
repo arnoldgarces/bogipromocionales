@@ -14,7 +14,7 @@ $row = mysql_fetch_array($SacarListado);
 <body>
 <header id="main-header"><?php include("inc/header.php"); ?></header><!-- / #main-header -->
 <div id="ver_producto">
-<div id="tittle_h"><center>Producto Agregado con Exito, puede verlo  Aqui: <a href="ver_producto.php?date=<?php echo $row['id']; ?>"><?php echo $row['titulo']; ?></a></center>
+<div id="tittle_h"><center>Producto Agregado/Editado con Exito</a></center>
 </div>
     
 	 <?php 

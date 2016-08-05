@@ -19,12 +19,11 @@ $insertSQL = "UPDATE producto SET titulo='$titulo', contenido='$contenido', auto
   mysql_select_db($database_conexion, $conexion);
   $Result1 = mysql_query($insertSQL, $conexion) or die(mysql_error());
 
-  $menexi = "exito.php";
-  $produc = $row_SacarproductoGet['id'];
+  $insertGoTo = "exito.php";
 
   if (isset($_SERVER['QUERY_STRING'])) {
     $insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";
     $insertGoTo .= $_SERVER['QUERY_STRING'];
   }
-	header(sprintf("Location: %s", $menexi + $produc));
+	header(sprintf("Location: %s", $insertGoTo));
  ?>
