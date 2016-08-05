@@ -1,2 +1,0 @@
-# bogipromocionales
-Bogi Articulos publicitarios

@@ -1,30 +1,45 @@
-<?php require_once('Connections/conexion.php'); 
-?>
-<title>Agregar Productos - Bogi</title>
+<?php require_once('Connections/conexion.php');
+	$idproducto= $_GET['date'];
+	
+	$updateSQL = sprintf("UPDATE producto SET visitas = visitas +1 WHERE id=%s",
+						 GetSQLValueString($idproducto, "int"));
+	
+	mysql_select_db($database_conexion, $conexion);
+	$Result1 = mysql_query($updateSQL, $conexion) or die(mysql_error());
+	
+	mysql_select_db($database_conexion, $conexion);
+	$query_SacarproductoGet = "SELECT * FROM producto WHERE id='$idproducto'";
+	$SacarproductoGet = mysql_query($query_SacarproductoGet, $conexion) or die(mysql_error());
+	$row_SacarproductoGet = mysql_fetch_assoc($SacarproductoGet);
+	$totalRows_SacarproductoGet = mysql_num_rows($SacarproductoGet);
+	mysql_free_result($SacarproductoGet);
+    ?> 
+<title>Editar Productos - Bogi</title>
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
 <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<header id="main-header"><?php include("inc/header.php"); ?></header><!-- / #main-header -->
+<header id="main-header"><?php include("inc/header.php"); ?></header><!-- / #main-header --></header><!-- / #main-header -->
 	<div id="ver_producto">
-    <div id="tittle_h"><center>AGREGAR PRODUCTOS</center></div><br>
+    <div id="tittle_h"><center>EDITAR PRODUCTO</center></div><br>
 	<center>Le recomendamos agregar todos los campos, para que la informacion quede completa</center>
     <div id="cacategoria" style="float:left"><?php include("inc/categorias.php"); ?></div>
-	  <form action="proceso_guardar.php" method="post" name="form1" id="form1" enctype="multipart/form-data">
+	  <form action="proceso_editar.php" method="post" name="form1" id="form1" enctype="multipart/form-data">
         <table align="center">
           <tr valign="baseline">
             <td width="60" align="right" nowrap="nowrap">Nombre del Producto:</td>
-            <td width="531"><input type="text" name="titulo" value="" size="50" /></td>
+            <td width="531"><input type="text" name="titulo" value="<?php echo $row_SacarproductoGet['titulo']; ?>" size="50" /></td>
           </tr>
           <tr valign="baseline">
             <td height="124" align="right" valign="top" nowrap="nowrap">Descripcion del producto:</td>
-            <td><textarea name="contenido" cols="50" rows="20"></textarea></td>
+            <td><textarea name="contenido" cols="50" rows="20"><?php echo $row_SacarproductoGet['contenido']; ?></textarea></td>
           </tr>
           <tr valign="baseline">
             <td nowrap="nowrap" align="right">Subcategoria:</td>
             <td><select name="categoria">
+              <option value="<?php echo $row_SacarproductoGet['categoria']; ?>" selected><?php echo $row_SacarproductoGet['categoria']; ?></option>
               <option value="101">Boligrafo Con resaltador</option>
               <option value="102">Ecologicos</option>
               <option value="103">Estuches Boligrafos</option>
@@ -120,15 +135,15 @@
                     </tr>
                     <tr>
                      <td width="60" align="right" nowrap="nowrap">Medidas:</td>
-            <td width="531"><input type="text" name="medidas" value="" size="50" /></td>
+            <td width="531"><input type="text" name="medidas" value="<?php echo $row_SacarproductoGet['medidas']; ?>" size="50" /></td>
             </tr>
                <tr>
                      <td width="60" align="right" nowrap="nowrap">Materiales:</td>
-            <td width="531"><input type="text" name="materiales" value="" size="50" /></td>
+            <td width="531"><input type="text" name="materiales" value="<?php echo $row_SacarproductoGet['materiales']; ?>" size="50" /></td>
             </tr>
                 <tr>
                      <td width="60" align="right" nowrap="nowrap">Colores:</td>
-            <td width="531"><input type="text" name="colores" value="" size="50" /></td>
+            <td width="531"><input type="text" name="colores" value="<?php echo $row_SacarproductoGet['colores']; ?>" size="50" /></td>
             </tr>
 		            <tr bgcolor="skyblue">
             <td bgcolor="skyblue"><strong>Foto:</strong></td><td><input type="file" name="imagen" ></td>
@@ -136,8 +151,8 @@
             <tr bgcolor="skyblue">
             </tr>
           <tr valign="baseline">
-            <td nowrap="nowrap" align="right">&nbsp;</td>
-            <td><br><br><input type="submit" value="Agregar Producto" /></td>
+            <td><input type="text" name="idprod" value="<?php echo $row_SacarproductoGet['id']; ?>" hidden ></td>
+            <td><input type="submit" value="Editar Producto" /></td>
           </tr>
         </table>
         <input type="hidden" name="MM_insert" value="form1" />
@@ -162,5 +177,5 @@
 			?>
 
     </div>
-</body>
+    </body>
 </html>

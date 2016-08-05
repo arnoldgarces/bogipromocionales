@@ -22,9 +22,23 @@
 <br />
 <br />
 </div>
-    
-    <div id="footer">
-    BOGI - Articulos Publicitarios S.A.S 2016. Todos los derechos reservados pagina web diseñada por: Arnold Garces Si eres Administrador Ingresa <a href="<?php echo $urlweb ?>login.php">Aqui</a>
+   
+	 <?php 
+		?>
+        <div id="footer-admin">
+        <?php
+		if (isset ($_SESSION['MM_Id'])){
+			 		include("inc/footeradmin.php");
+             }
+			 else
+			 {
+				 	 		?>
+        <div id="footer">
+        <?php
+				include("inc/footer.php");
+			 }
+			?>
+
     </div>
 </body>
 </html>

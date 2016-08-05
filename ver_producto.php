@@ -29,29 +29,48 @@
 <body>
 <header id="main-header"><?php include("inc/header.php"); ?></header><!-- / #main-header -->
 	<div id="ver_producto">
-    <div id="cacategoria" style="float:left"><?php include("inc/categorias.php"); ?></div>
-	<div id="fotospro"><img width="250%" src="data:image/jpg;base64,<?php echo base64_encode($row_SacarproductoGet['foto']); ?>" ></div>
-    <div id="infopro">
-        <table align="center">
-    	   <tr valign="baseline">
+    	<div id="cacategoria" style="float:left"><?php include("inc/categorias.php"); ?></div>
+		<div id="fotospro"><img width="250%" src="data:image/jpg;base64,<?php echo base64_encode($row_SacarproductoGet['foto']); ?>" ></div>
+    	<div id="infopro">
+        	<table align="center">
+    	    <tr valign="baseline">
         	<br /><center><div id="tittle_h" style="border-bottom:1px dashed #ccc"><?php echo $row_SacarproductoGet['titulo']; ?></div></center>
-	       </tr>
-    	   <tr><td><br /><div id="contenido"><strong>Descripcion: </strong></td><td><?php echo $row_SacarproductoGet['contenido']; ?></div></td></tr>
-	       <tr><td><span class="in_txt"><strong>Subcategoria: </strong></td><td><?php echo $row_SacarproductoGet['categoria']; ?></span></td></tr>
-   	       <tr><td><span class="in_txt"><strong>Medidas: </strong></td><td><?php echo $row_SacarproductoGet['medidas']; ?></span></td></tr>
-  	       <tr><td><span class="in_txt"><strong>Materiales:</strong></td><td><?php echo $row_SacarproductoGet['materiales']; ?></span></td></tr>
-	       <tr><td><span class="in_txt"><strong>Colores: </strong></td><td><?php echo $row_SacarproductoGet['colores']; ?></span></td></tr>
-           <tr><td><span class="in_txt"><strong>Visitas: </strong></td><td><?php echo $row_SacarproductoGet['visitas']; ?></span></td></tr>
-    	   </table>
-	    <br />
-	</div>
- 	   
+	        </tr>
+    	    <tr><td><br /><div id="contenido"><strong>Descripcion: </strong></td><td><?php echo $row_SacarproductoGet['contenido']; ?> </div></td></tr>
+	        <tr><td><span class="in_txt"><strong>Subcategoria: </strong></td><td><?php echo $row_SacarproductoGet['categoria']; ?></span></td></tr>
+   	        <tr><td><span class="in_txt"><strong>Medidas: </strong></td><td><?php echo $row_SacarproductoGet['medidas']; ?></span></td></tr>
+  	        <tr><td><span class="in_txt"><strong>Materiales:</strong></td><td><?php echo $row_SacarproductoGet['materiales']; ?></span></td></tr>
+	        <tr><td><span class="in_txt"><strong>Colores: </strong></td><td><?php echo $row_SacarproductoGet['colores']; ?></span></td></tr>
+            <tr><td><span class="in_txt"><strong>Visitas: </strong></td><td><?php echo $row_SacarproductoGet['visitas']; ?></span></td></tr>
+            <?php 
+				if (isset ($_SESSION['MM_Id'])){
+			 ?>
+             <tr><td><a href="editarproductos.php?date=<?php echo $row_SacarproductoGet['id']; ?>">EDITAR ESTE PRODUCTO</a></td></tr>
+             <?php
+	}		
+			?>
+             </table><br />
+	    </div>
+     </div>
+    </div>
+    </div>
+   
+	 <?php 
+		?>
+        <div id="footer-admin">
+        <?php
+		if (isset ($_SESSION['MM_Id'])){
+			 		include("inc/footeradmin.php");
+             }
+			 else
+			 {
+				 	 		?>
+        <div id="footer">
+        <?php
+				include("inc/footer.php");
+			 }
+			?>
 
-      </div>
     </div>
-    </div>
-<div id="footer">
-    BOGI - Articulos Publicitarios S.A.S 2016. Todos los derechos reservados pagina web diseñada por: Arnold Garces Si eres Administrador Ingresa <a href="<?php echo $urlweb ?>login.php">Aqui</a>
-    </div>
-    </body>
+</body>
     </html>

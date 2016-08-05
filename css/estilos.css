@@ -47,9 +47,9 @@ nav {
  */
 #Whatsapp-header {
 	float: right;
-	padding: 15px 0 0 20px;
+	padding: 10px;
 	text-decoration: none;
-	margin-top: 20px;
+	margin-top: 0px;
 }
 	#Whatsapp-header:hover {
 		color: #FF8C00;
@@ -282,6 +282,20 @@ font-size:18px;
             color: #fff;
 		    background: #333;
 			width: 90%;
-		    bottom: 0;
-		    position: fixed;
+   		    bottom: 0;
+		    position: absolute;
 }
+#footer-admin {
+	margin-bottom:0px;
+	height: 40px;
+	padding:5px;
+	color: white;
+	background: #333;
+	width:90%;
+    bottom: 0;
+	position:fixed;	
+	
+}	
+	#footer-admin a {
+		color: white;
+	}

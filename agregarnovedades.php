@@ -7,22 +7,7 @@
 </head>
 
 <body>
-<header id="main-header">
-<a id="Whatsapp-header" href="#">
-    <span class="site-name">Bienvenido: <br /><?php  echo $_SESSION['MM_Username']?></span>
-    </a>
-	<nav>
-		<ul>
-			<li><a href="<?php echo $urlweb ?>agregarnovedades.php">Agregar Novedades</a></li>
-			<li><a href="<?php echo $urlweb ?>agregar.php">Agregar Productos</a></li>
-      		<li><a title="Productos" href="<?php echo $urlweb ?>productos.php?date=0">Editar Productos</a></li>
-       	    <li><a title="Cotizaciones" href="#">Eliminar Productos</a></li>
-			<li><a title="Acerca de nosotros" href="<?php echo $urlweb ?>/logout.php">Salir</a></li>
-		</ul>
-	</nav><!-- / nav -->
-
-
-</header><!-- / #main-header -->
+	<header id="main-header"><?php include("inc/header.php"); ?></header><!-- / #main-header -->
 	<div id="ver_producto">
     <div id="tittle_h"><center>AGREGAR NOVEDAD</center></div><br>
 	<center>Le recomendamos agregar todos los campos, para que la informacion quede completa</center>
@@ -47,8 +32,23 @@
       </form>
       </div>
     </div>
- <div id="footer">
-    BOGI - Articulos Publicitarios S.A.S 2016. Todos los derechos reservados pagina web diseñada por: Arnold Garces Si eres Administrador Ingresa <a href="<?php echo $urlweb ?>login.php">Aqui</a>
+   
+	 <?php 
+		?>
+        <div id="footer-admin">
+        <?php
+		if (isset ($_SESSION['MM_Id'])){
+			 		include("inc/footeradmin.php");
+             }
+			 else
+			 {
+				 	 		?>
+        <div id="footer">
+        <?php
+				include("inc/footer.php");
+			 }
+			?>
+
     </div>
 </body>
 </html>

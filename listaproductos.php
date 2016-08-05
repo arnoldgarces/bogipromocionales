@@ -26,8 +26,11 @@ $SacarListado = mysql_query($query_SacarListado, $conexion) or die(mysql_error()
   <a id="vistaprepro" href="ver_producto.php?date=<?php echo $row['id']; ?>">
   <div id="fotopr"><center><img height="150px" width="150px" src="data:image/jpg;base64,<?php echo base64_encode($row['foto']); ?>"</center></div>
     <div id="tittle_h"><center><?php echo $row['titulo']; ?></center></div>
-    <div id="post_info"><center><strong>Materiales: </strong><?php echo $row['materiales']; ?></center>
-    <center><strong>Colores: </strong><?php echo $row['colores']; ?></center></div>
+    <div id="post_info">
+    	<strong>Materiales: </strong><?php echo $row['materiales']; ?><br />
+
+		<strong>Colores: </strong><?php echo $row['colores']; ?>
+    </div>
 </a>
  
   <?php } 
@@ -36,9 +39,22 @@ $SacarListado = mysql_query($query_SacarListado, $conexion) or die(mysql_error()
 <br />
 <br />
 </div>
-    
-    <div id="footer">
-    BOGI - Articulos Publicitarios S.A.S 2016. Todos los derechos reservados pagina web diseñada por: Arnold Garces Si eres Administrador Ingresa <a href="<?php echo $urlweb ?>login.php">Aqui</a>
-    </div>
-</body>
+   
+	 <?php 
+		?>
+        <div id="footer-admin">
+        <?php
+		if (isset ($_SESSION['MM_Id'])){
+			 		include("inc/footeradmin.php");
+             }
+			 else
+			 {
+				 	 		?>
+        <div id="footer">
+        <?php
+				include("inc/footer.php");
+			 }
+			?>
+
+    </div></body>
 </html>

@@ -26,10 +26,24 @@
     BOGI ARTICULOS PUBLICITARIOS S.A.S queremos consolidarnos como una compañía líder en el sector de los artículos promocionales. Hacia el año 2022 expandiendo su alcance a las principales ciudades del país y aumentando el número de empresas aliadas.
    </div>
     
- <div id="footer">
-    BOGI - Articulos Publicitarios S.A.S 2016. Todos los derechos reservados pagina web diseñada por: Arnold Garces Si eres Administrador Ingresa <a href="<?php echo $urlweb ?>login.php">Aqui</a>
-    </div>
-<br />
+   
+	 <?php 
+		?>
+        <div id="footer-admin">
+        <?php
+		if (isset ($_SESSION['MM_Id'])){
+			 		include("inc/footeradmin.php");
+             }
+			 else
+			 {
+				 	 		?>
+        <div id="footer">
+        <?php
+				include("inc/footer.php");
+			 }
+			?>
+
+    </div><br />
 <br />
 </body>
 </html>
