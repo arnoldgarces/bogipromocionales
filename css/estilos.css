@@ -148,8 +148,8 @@ list-style:none;
 }
 
 #vistaprepro {
-	width: 17%;
-	height: 250px;
+	width: 25%;
+	height: 300px;
 	float:left;	
 	padding: 20px;
 	background: #FFF;
@@ -157,7 +157,7 @@ list-style:none;
 	margin:10px;
 	border-width: thin;
 	border-style: solid;
-	border-color:#333;
+	border-color:#06F;
 	text-decoration: none;
 	margin-top: 20px;
 	}
@@ -167,7 +167,6 @@ list-style:none;
 	
 	#vistaprepro:hover {
 		background: #333;
-		width:18%;
 		color:#FFF;
 	}
 	
@@ -198,6 +197,7 @@ list-style:none;
 	text-transform: uppercase;
 	font-weight: normal;
 	text-shadow: 1px 1px 1px #CCC;
+	text-align:center;
 }
 #tittle_h a {
 	color: #535353;
@@ -265,7 +265,7 @@ list-style:none;
 #infopro {
 	float: left;
 	width:50%;
-	margin-left:20%;
+	margin-left:30%;
 	text-decoration:blink;
 }
 

@@ -33,15 +33,13 @@
 		<div id="fotospro"><img width="250%" src="data:image/jpg;base64,<?php echo base64_encode($row_SacarproductoGet['foto']); ?>" ></div>
     	<div id="infopro">
         	<table align="center">
-    	    <tr valign="baseline">
-        	<center><div id="tittle_h" style="border-bottom:1px dashed #ccc"><?php echo $row_SacarproductoGet['titulo']; ?></div></center>
-	        </tr>
-    	    <tr><td><br /><strong>Descripcion: </strong></td><td><?php echo $row_SacarproductoGet['contenido']; ?></td></tr>
-	        <tr><td><strong>Subcategoria: </strong></td><td><?php echo $row_SacarproductoGet['categoria']; ?></td></tr>
-   	        <tr><td><strong>Medidas: </strong></td><td><?php echo $row_SacarproductoGet['medidas']; ?></td></tr>
-  	        <tr><td><strong>Materiales:</strong></td><td><?php echo $row_SacarproductoGet['materiales']; ?></td></tr>
-	        <tr><td><strong>Colores: </strong></td><td><?php echo $row_SacarproductoGet['colores']; ?></td></tr>
-            <tr><td><strong>Visitas: </strong></td><td><?php echo $row_SacarproductoGet['visitas']; ?></td></tr>
+    	    <tr align="center"><div id="tittle_h" style="border-bottom:1px dashed #ccc"><?php echo $row_SacarproductoGet['titulo']; ?></div></tr>
+    	    <tr><td align="center"><br /><strong>Descripcion: </strong></td><td><?php echo $row_SacarproductoGet['contenido']; ?></td></tr>
+	        <tr><td align="center"><strong>Subcategoria: </strong></td><td><?php echo $row_SacarproductoGet['categoria']; ?></td></tr>
+   	        <tr><td align="center"><strong>Medidas: </strong></td><td><?php echo $row_SacarproductoGet['medidas']; ?></td></tr>
+  	        <tr><td align="center"><strong>Materiales:</strong></td><td><?php echo $row_SacarproductoGet['materiales']; ?></td></tr>
+	        <tr><td align="center"><strong>Colores: </strong></td><td><?php echo $row_SacarproductoGet['colores']; ?></td></tr>
+            <tr><td align="center"><strong>Visitas: </strong></td><td><?php echo $row_SacarproductoGet['visitas']; ?></td></tr>
             <?php 
 				if (isset ($_SESSION['MM_Id'])){
 			 ?>
