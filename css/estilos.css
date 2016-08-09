@@ -283,7 +283,7 @@ font-size:18px;
 		    background: #333;
 			width: 90%;
    		    bottom: 0;
-		    position: absolute;
+		    position: fixed;
 }
 #footer-admin {
 	margin-bottom:0px;

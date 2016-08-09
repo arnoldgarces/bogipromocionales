@@ -5,7 +5,7 @@
 		<ul>
 			<li><a href="<?php echo $urlweb ?>">Inicio</a></li>
       		<li><a title="Productos" href="<?php echo $urlweb ?>listaproductos.php">Productos</a></li>
-       	    <li><a title="Cotizaciones" href="<?php echo $urlweb ?>/solicitaCotizacion.php">¡Solicita tu cotizacion!</a></li>
+       	    <li><a title="Cotizaciones" href="<?php echo $urlweb ?>/solicitaCotizacion.php">Contactenos</a></li>
 			<li><a title="Acerca de nosotros" href="<?php echo $urlweb ?>/acercade.php">Acerca de</a></li>
 		</ul>
 	</nav><!-- / nav -->
