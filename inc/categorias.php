@@ -1,5 +1,5 @@
      <div id="tittle_h">categorias</div>
-     	<ul class="nov" style="padding-left:0px;" style="float:none;"> 
+     	<ul class="nov" style="padding-left:0px;" style="float:none;">
 			<li><a title="Articulos de escritura" href="productos.php?date=100">Articulos de escritura</a>
             	<ul>
                 	<li><a title="Boligrafo con resaltador" href="productos.php?date=101">Boligrafo con resaltador</a>

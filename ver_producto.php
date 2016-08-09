@@ -34,14 +34,14 @@
     	<div id="infopro">
         	<table align="center">
     	    <tr valign="baseline">
-        	<br /><center><div id="tittle_h" style="border-bottom:1px dashed #ccc"><?php echo $row_SacarproductoGet['titulo']; ?></div></center>
+        	<center><div id="tittle_h" style="border-bottom:1px dashed #ccc"><?php echo $row_SacarproductoGet['titulo']; ?></div></center>
 	        </tr>
-    	    <tr><td><br /><div id="contenido"><strong>Descripcion: </strong></td><td><?php echo $row_SacarproductoGet['contenido']; ?> </div></td></tr>
-	        <tr><td><span class="in_txt"><strong>Subcategoria: </strong></td><td><?php echo $row_SacarproductoGet['categoria']; ?></span></td></tr>
-   	        <tr><td><span class="in_txt"><strong>Medidas: </strong></td><td><?php echo $row_SacarproductoGet['medidas']; ?></span></td></tr>
-  	        <tr><td><span class="in_txt"><strong>Materiales:</strong></td><td><?php echo $row_SacarproductoGet['materiales']; ?></span></td></tr>
-	        <tr><td><span class="in_txt"><strong>Colores: </strong></td><td><?php echo $row_SacarproductoGet['colores']; ?></span></td></tr>
-            <tr><td><span class="in_txt"><strong>Visitas: </strong></td><td><?php echo $row_SacarproductoGet['visitas']; ?></span></td></tr>
+    	    <tr><td><br /><strong>Descripcion: </strong></td><td><?php echo $row_SacarproductoGet['contenido']; ?></td></tr>
+	        <tr><td><strong>Subcategoria: </strong></td><td><?php echo $row_SacarproductoGet['categoria']; ?></td></tr>
+   	        <tr><td><strong>Medidas: </strong></td><td><?php echo $row_SacarproductoGet['medidas']; ?></td></tr>
+  	        <tr><td><strong>Materiales:</strong></td><td><?php echo $row_SacarproductoGet['materiales']; ?></td></tr>
+	        <tr><td><strong>Colores: </strong></td><td><?php echo $row_SacarproductoGet['colores']; ?></td></tr>
+            <tr><td><strong>Visitas: </strong></td><td><?php echo $row_SacarproductoGet['visitas']; ?></td></tr>
             <?php 
 				if (isset ($_SESSION['MM_Id'])){
 			 ?>

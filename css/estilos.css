@@ -21,6 +21,7 @@ html
  */
 nav {
 	float: left;
+		font-size: 16px;
 }
 	nav ul {
 		margin: 0;
@@ -40,7 +41,7 @@ nav {
 			}
 			
 				nav ul li a:hover {
-					background: #FFD700;
+					background: #06F;
 				}
 /*
  * Logo
@@ -91,7 +92,7 @@ list-style:none;
 		padding: 0px;
 		font-size:14px;
 		position:relative;
-		border: 2px #FFD700 solid;
+		border: 2px #06F solid;
    		width:200px;
 		background:#333;
 		color:#FFF;
@@ -114,7 +115,7 @@ list-style:none;
 						color:#FFF;
 	} 
 	.nov li a:hover{
-						background: #FFD700;
+						background: #06F;
 	}
 
 #leftt {
@@ -192,7 +193,7 @@ list-style:none;
 
 #tittle_h {
 	font-size: 18px;
-	color: #535353;
+	color: #06F;
 	line-height: 1.5em;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -204,6 +205,15 @@ list-style:none;
 }
 #tittle_h a:hover {
 	color: #7da1bc;
+}
+
+#post_info{
+	font-size: 10px;
+	color: #000;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #CCC;
 }
 
 #buscar {
